@@ -1,69 +1,11 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <title>HCM Cam Giao Thong</title>
-    <script>
-        function reloadDiv() {
-            //document.getElementById("cameratracking").html();
-            // Example: Fetch content from a server (or update content)
-            //const baseUrl = img.src; // replace with your image file
-            //img.src = baseUrl + "?t=" + new Date().getTime(); // cache-busting query param
-			//window.location.reload();
-        }
-
-        function reloadAllImages() {
-            const images = document.querySelectorAll("img");
-            images.forEach(img => {
-                const originalSrc = img.src; // store clean source if not already
-                img.src = originalSrc + "?t=" + new Date().getTime(); // reload with timestamp
-            });
-            //logging();
-        }
-
-        let timer = null;
-        let seconds = 0;
-
-        function startTimer() {
-            if (timer === null) {
-                // Start timer
-                timer = setInterval(() => {
-                    seconds++;
-                    timerDisplay.textContent = seconds % 10;
-                    if (seconds > 0 && seconds % 10 == 0)
-                        reloadDiv;//reloadAllImages();						
-                }, 1000);
-                toggleButton.textContent = "Stop Timer";
-            }
-        }
-
-        function stopTimer() {
-            // Stop timer
-            clearInterval(timer);
-            timer = null;
-            seconds = 0;
-            timerDisplay.textContent = "";
-            toggleButton.textContent = "Start Timer";
-        }
-
-        function logging() {
-            var message = console.log;
-            const logDiv = document.getElementById('logDisplay2');
-            logDiv.textContent = message;
-        }
-
-        // Reload the div every 10 seconds
-        //setInterval(reloadDiv, 10000);
-        //setInterval(reloadAllImages, 10000);
-        // Load immediately on page load
-        //window.onload = startTimer;
-    </script>
 </head>
-
 <body id="ext-element-1" class="x-body x-gecko x-desktop x-border-layout-ct x-border-box x-scroller x-container x-container-default" data-componentid="ext-comp-1009" role="application" style="border-width: 0px; overflow: auto;">    
-    <div class="x-window x-layer x-window-default x-closable x-window-closable x-window-default-closable x-border-box x-resizable y-resizable x-window-resizable y-window-resizable x-window-default-resizable x-unselectable" style="width: 100%; height: 100%; z-index: 19030; right: auto; left: 42px; top: 0px;" role="presentation" aria-hidden="false" aria-disabled="false" aria-labelledby="window-1355_header-title-textEl" id="window-1355" tabindex="-1" data-componentid="window-1355">        
-	
-        <div class="x-toolbar x-docked x-toolbar-footer x-box-layout-ct" role="toolbar" aria-hidden="false" aria-disabled="false" id="toolbar-1219" style="width: 1470px; right: auto; left: 0px; top: 0px;">
+    <div class="x-window x-layer x-window-default x-closable x-window-closable x-window-default-closable x-border-box x-resizable y-resizable x-window-resizable y-window-resizable x-window-default-resizable x-unselectable" style="width: 100%; height: 100%; z-index: 19030; right: auto; left: 42px; top: 0px;" role="presentation" aria-hidden="false" aria-disabled="false" aria-labelledby="window-1355_header-title-textEl" id="window-1355" tabindex="-1" data-componentid="window-1355">	
+        <div class="x-toolbar x-docked x-toolbar-footer x-box-layout-ct" role="toolbar" aria-hidden="false" aria-disabled="false" id="toolbar-1219" style="width: 100%; right: auto; left: 0px; top: 0px;">
             <div id="toolbar-1219-innerCt" data-ref="innerCt" role="presentation" class="x-box-inner" style="width: 100%; height: 32px;">
                     <div id="toolbar-1219-targetEl" data-ref="targetEl" class="x-box-target" role="presentation" style="width: 1464px;">
                         <a class="x-btn x-unselectable x-box-item x-toolbar-item x-btn-default-small" hidefocus="on" unselectable="on" role="button" aria-hidden="false" aria-disabled="false" id="button-1228" tabindex="-1" aria-pressed="false" data-componentid="button-1228" style="right: auto; left: 0px; margin: 0px; top: 0px;">
@@ -76,22 +18,7 @@
                         </a>
                     </div>
             </div>
-			<!--h3>Timer:<span id="timerDisplay">0</span>seconds</h3>
-			//<button id="toggleButton">Start Timer</button-->
-			<script>
-				const timerDisplay = document.getElementById("timerDisplay");
-				const toggleButton = document.getElementById("toggleButton");
-
-				toggleButton.addEventListener("click", () => {
-					if (timer === null) {
-						startTimer();
-					} else {
-						stopTimer();
-					}
-				});
-			</script>
-        </div>
-            
+        </div>            
         <div id="cameratracking" data-ref="body" class="x-panel-body x-panel-body-default x-panel-body-default x-scroller y-scroller x-noborder-trbl" role="presentation" style="overflow: auto; width: 100%; left: 20px; top: 20px; height: 720px;">
                 <table class="panel-tracking-container">
                     <tbody>
@@ -347,9 +274,5 @@
                 </table>
             </div>
         </div>
-    <footer>
-        <h4>Log:<span id="logDisplay" />
-        </h4>
-    </footer>
 </body>
 </html>
