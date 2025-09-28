@@ -1,316 +1,272 @@
 <!DOCTYPE html>
-<html>
+<html lang="vi">
 <head>
-    <title>HCM Cam Giao Thong</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ảnh Giao Thông TP.HCM</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        .image-gallery {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            gap: 10px;
+            margin: 20px;
+        }
+        .image-gallery img {
+            width: 100%;
+            height: auto;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+        .camera-info {
+            text-align: center;
+            margin-top: 2px;
+        }
+        .camera-description {
+            font-size: 8px;
+            color: #555;
+        }
+        .camera-location {
+            font-size: 12px;
+            color: #777;
+        }
+    </style>
 </head>
-<body id="ext-element-1" class="x-body x-gecko x-desktop x-border-layout-ct x-border-box x-container x-container-default" data-componentid="ext-comp-1009" role="application" >    
-    <div class="x-window x-layer x-window-default x-closable x-window-closable x-window-default-closable x-border-box x-resizable y-resizable x-window-resizable y-window-resizable x-window-default-resizable x-unselectable" 
-        style="width: 100%; right: auto; left: 20px; top: 20px;border-width: 5px;" role="presentation" id="window-1355" tabindex="-1" >	
-        <div class="x-toolbar x-docked x-toolbar-footer x-box-layout-ct" role="toolbar" aria-hidden="false" aria-disabled="false" id="toolbar-1219" style="width: 100%; right: auto; left: 0px; top: 0px;">
-            <div id="toolbar-1219-innerCt" data-ref="innerCt" role="presentation" class="x-box-inner" style="width: 100%; height: 32px;">
-                    <div id="toolbar-1219-targetEl" data-ref="targetEl" class="x-box-target" role="presentation" style="width: 1464px;">
-                        <a class="x-btn x-unselectable x-box-item x-toolbar-item x-btn-default-small" hidefocus="on" unselectable="on" role="button" aria-hidden="false" aria-disabled="false" id="button-1228" tabindex="-1" aria-pressed="false" data-componentid="button-1228" style="right: auto; left: 0px; margin: 0px; top: 0px;">
-                            <span id="button-1228-btnWrap" data-ref="btnWrap" role="presentation" unselectable="on" style="" class="x-btn-wrap x-btn-wrap-default-small ">
-                                <span id="button-1228-btnEl" data-ref="btnEl" role="presentation" unselectable="on" style="" class="x-btn-button x-btn-button-default-small x-btn-text    x-btn-button-center ">
-                                    <span id="button-1228-btnIconEl" data-ref="btnIconEl" role="presentation" unselectable="on" class="x-btn-icon-el x-btn-icon-el-default-small  " style="" />
-                                    <span id="button-1228-btnInnerEl" data-ref="btnInnerEl" unselectable="on" class="x-btn-inner x-btn-inner-default-small">Danh sách camera theo dõi</span>
-                                </span>
-                            </span>
-                        </a>
-                    </div>
-            </div>
-        </div>            
-        <div id="cameratracking" data-ref="body" class="x-panel-body x-panel-body-default x-panel-body-default x-noborder-trbl" role="presentation" 
-            style="width: 100%;left: 20px; top: 20px; bottom: 20px;">
-                <table class="panel-tracking-container">
-                    <tbody>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-5a8279865058170011f6eaef-td" role="option" tabindex="-1" data-recordindex="0" data-recordid="70" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a8279865058170011f6eaef" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Văn Linh - Phạm Hùng 2</span>
-                                        <img class="camImg-5a8279865058170011f6eaef" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8279865058170011f6eaef&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8279865058170011f6eaef&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767140" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-58744fb0b807da0011e33cc0-td" data-recordindex="1" data-recordid="80" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-58744fb0b807da0011e33cc0" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Hưng Phú - Chánh Hưng 2</span>
-                                        <img class="camImg-58744fb0b807da0011e33cc0" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=58744fb0b807da0011e33cc0&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=58744fb0b807da0011e33cc0&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767140" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item x-item-selected" id="panel-tracking-56de42f611f398ec0c48128b-td" data-recordindex="2" data-recordid="90" data-boundview="dataview-1218" style="" aria-selected="true">
-                                <div class="nav-item-content" id="panel-tracking-56de42f611f398ec0c48128b" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Võ Văn Kiệt - Nguyễn Văn Cừ 1</span>
-                                        <img class="camImg-56de42f611f398ec0c48128b" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=56de42f611f398ec0c48128b&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=56de42f611f398ec0c48128b&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767140" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-649da77ea6068200171a6dd4-td" data-recordindex="3" data-recordid="100" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-649da77ea6068200171a6dd4" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Tôn Đức Thắng - Công trường Mê Linh</span>
-                                        <img class="camImg-649da77ea6068200171a6dd4" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=649da77ea6068200171a6dd4&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=649da77ea6068200171a6dd4&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767140" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5a606dbc8576340017d0662b-td" data-recordindex="4" data-recordid="110" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a606dbc8576340017d0662b" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Điện Biên Phủ - Nguyễn Hữu Cảnh</span>
-                                        <img class="camImg-5a606dbc8576340017d0662b" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a606dbc8576340017d0662b&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a606dbc8576340017d0662b&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767140" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-6623f5b56f998a001b25292f-td" data-recordindex="5" data-recordid="120" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6623f5b56f998a001b25292f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Võ Nguyên Giáp - quay đầu An Phú (2)</span>
-                                        <img class="camImg-6623f5b56f998a001b25292f" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6623f5b56f998a001b25292f&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6623f5b56f998a001b25292f&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767141" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-6792f16e8c5ed4001b27f482-td" data-recordindex="6" data-recordid="130" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6792f16e8c5ed4001b27f482" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Duy Trinh - Nguyễn Thị Tư</span>
-                                        <img class="camImg-63b548c3bfd3d90017ea77c0" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b548c3bfd3d90017ea77c0&amp;bg=black&amp;w=200&amp;h=130" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b548c3bfd3d90017ea77c0&amp;bg=black&amp;w=200&amp;h=130&amp;t=1758879654710" style="width:300px;height:230px">
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63b54dcbbfd3d90017ea7ba8-td" data-recordindex="7" data-recordid="176" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63b54dcbbfd3d90017ea7ba8" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Quốc Lộ 1 - Cổng ĐH Quốc gia TPHCM</span>
-                                        <img class="camImg-63b54dcbbfd3d90017ea7ba8" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b54dcbbfd3d90017ea7ba8&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b54dcbbfd3d90017ea7ba8&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767141" style="width:300px;height:230px" />
-                                    </div>
-                                    </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5a6065c58576340017d06615-td" data-recordindex="8" data-recordid="186" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a6065c58576340017d06615" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Tô Ngọc Vân - TX25</span>
-                                        <img class="camImg-5a6065c58576340017d06615" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a6065c58576340017d06615&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a6065c58576340017d06615&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767141" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-6623efc26f998a001b25277f-td" data-recordindex="9" data-recordid="223" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6623efc26f998a001b25277f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Tô Ký - Nguyễn Ảnh Thủ</span>
-                                        <img class="camImg-6623efc26f998a001b25277f" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6623efc26f998a001b25277f&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6623efc26f998a001b25277f&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767142" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-662a88a01afb9c00172d25d1-td" data-recordindex="10" data-recordid="233" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-662a88a01afb9c00172d25d1" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Trần Văn Giàu - Đường Thanh Niên</span>
-                                        <img class="camImg-662a88a01afb9c00172d25d1" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a88a01afb9c00172d25d1&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a88a01afb9c00172d25d1&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767142" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63b664edbfd3d90017eaaa24-td" data-recordindex="11" data-recordid="261" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63b664edbfd3d90017eaaa24" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>CT Trung Lương - Võ Trần Chí 2</span>
-                                        <span class="btn-switch-camera-mode">
-                                            <label id="tracking-btn-63b664edbfd3d90017eaaa24" class="tgl-btn" currentmode="camera" data-tg-off="Phát trực tiếp" data-tg-on="Phát hình ảnh" for="cb3" />
-                                        </span>
-                                        <img class="camImg-63b664edbfd3d90017eaaa24" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b664edbfd3d90017eaaa24&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b664edbfd3d90017eaaa24&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767143" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-5a825ded5058170011f6ead7-td" data-recordindex="12" data-recordid="280" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a825ded5058170011f6ead7" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Quốc lộ 50 - Cầu Ông Thìn (2)</span>
-                                        <img class="camImg-5a825ded5058170011f6ead7" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a825ded5058170011f6ead7&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a825ded5058170011f6ead7&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767143" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-662a861e1afb9c00172d23ad-td" data-recordindex="13" data-recordid="290" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-662a861e1afb9c00172d23ad" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Hữu Thọ - Phạm Hữu Lầu</span>
-                                        <span class="btn-switch-camera-mode">
-                                            <label id="tracking-btn-662a861e1afb9c00172d23ad" class="tgl-btn" currentmode="camera" data-tg-off="Phát trực tiếp" data-tg-on="Phát hình ảnh" for="cb3" />
-                                        </span>
-                                        <img class="camImg-662a861e1afb9c00172d23ad" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a861e1afb9c00172d23ad&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a861e1afb9c00172d23ad&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767143" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-583f976361cfea0012cf68f9-td" data-recordindex="14" data-recordid="300" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-583f976361cfea0012cf68f9" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Thị Định - Lê Phụng Hiểu</span>
-                                        <img class="camImg-583f976361cfea0012cf68f9" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=583f976361cfea0012cf68f9&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=583f976361cfea0012cf68f9&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767143" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63bd1f21bfd3d90017ec3d04-td" data-recordindex="15" data-recordid="310" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63bd1f21bfd3d90017ec3d04" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Huỳnh Tấn Phát - Phạm Hữu Lầu</span>
-                                        <img class="camImg-63bd1f21bfd3d90017ec3d04" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63bd1f21bfd3d90017ec3d04&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63bd1f21bfd3d90017ec3d04&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767144" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-662a8ddd1afb9c00172d2a0f-td" data-recordindex="16" data-recordid="338" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-662a8ddd1afb9c00172d2a0f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Văn Linh - cầu Tân Thuận 2</span>
-                                        <img class="camImg-662a8ddd1afb9c00172d2a0f" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a8ddd1afb9c00172d2a0f&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a8ddd1afb9c00172d2a0f&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767144" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63ae777cbfd3d90017e8f177-td" data-recordindex="17" data-recordid="348" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63ae777cbfd3d90017e8f177" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Tất Thành - Đoàn Như Hài</span>
-                                        <img class="camImg-63ae777cbfd3d90017e8f177" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63ae777cbfd3d90017e8f177&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63ae777cbfd3d90017e8f177&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767144" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-586e1f18f9fab7001111b0a5-td" data-recordindex="18" data-recordid="358" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-586e1f18f9fab7001111b0a5" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Cộng Hòa - Trường Chinh</span>
-                                        <img class="camImg-586e1f18f9fab7001111b0a5" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=586e1f18f9fab7001111b0a5&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=586e1f18f9fab7001111b0a5&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767144" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-587478d8b807da0011e33cf3-td" data-recordindex="19" data-recordid="368" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-587478d8b807da0011e33cf3" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nút giao Bảy Hiền 1 (Cách Mạng Tháng Tám)</span>
-                                        <img class="camImg-587478d8b807da0011e33cf3" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=587478d8b807da0011e33cf3&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=587478d8b807da0011e33cf3&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767145" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5deb576d1dc17d7c5515acf9-td" data-recordindex="20" data-recordid="378" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5deb576d1dc17d7c5515acf9" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nút giao Công Trường Dân Chủ</span>
-                                        <img class="camImg-5deb576d1dc17d7c5515acf9" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf9&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf9&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767145" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63b54d27bfd3d90017ea7ae5-td" data-recordindex="21" data-recordid="496" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63b54d27bfd3d90017ea7ae5" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Xa lộ Hà Nội - Đường D1</span>
-                                        <span class="btn-switch-camera-mode">
-                                            <label id="tracking-btn-63b54d27bfd3d90017ea7ae5" class="tgl-btn" currentmode="camera" data-tg-off="Phát trực tiếp" data-tg-on="Phát hình ảnh" for="cb3" />
-                                        </span>
-                                        <img class="camImg-63b54d27bfd3d90017ea7ae5" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b54d27bfd3d90017ea7ae5&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63b54d27bfd3d90017ea7ae5&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767146" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-56de42f611f398ec0c48127e-td" data-recordindex="22" data-recordid="524" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-56de42f611f398ec0c48127e" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Mai Chí Thọ - Võ Nguyên Giáp (Cát Lái cầu B)</span>
-                                        <img class="camImg-56de42f611f398ec0c48127e" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=56de42f611f398ec0c48127e&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=56de42f611f398ec0c48127e&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767146" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5a10c79f02eb490011a0b0dd-td" data-recordindex="23" data-recordid="561" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a10c79f02eb490011a0b0dd" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Mai Chí Thọ - Tố Hữu (C6)</span>
-                                        <img class="camImg-5a10c79f02eb490011a0b0dd" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a10c79f02eb490011a0b0dd&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a10c79f02eb490011a0b0dd&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767146" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-662b862a1afb9c00172dd1ff-td" data-recordindex="24" data-recordid="580" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-662b862a1afb9c00172dd1ff" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Hàm Nghi - Phó Đức Chính</span>
-                                        <img class="camImg-662b862a1afb9c00172dd1ff" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662b862a1afb9c00172dd1ff&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662b862a1afb9c00172dd1ff&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767108" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5deb576d1dc17d7c5515acf7-td" data-recordindex="25" data-recordid="590" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5deb576d1dc17d7c5515acf7" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nút giao Ngã sáu Cộng Hòa</span>
-                                        <img class="camImg-5deb576d1dc17d7c5515acf7" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf7&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf7&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767102" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-5deb576d1dc17d7c5515acf3-td" data-recordindex="26" data-recordid="600" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5deb576d1dc17d7c5515acf3" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Ba Tháng Hai - Lý Thái Tổ</span>
-                                        <img class="camImg-5deb576d1dc17d7c5515acf3" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf3&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5deb576d1dc17d7c5515acf3&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767128" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-63ae7be0bfd3d90017e8f3a8-td" data-recordindex="27" data-recordid="610" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-63ae7be0bfd3d90017e8f3a8" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Ba Tháng Hai - Lê Đại Hành 1</span>
-                                        <img class="camImg-63ae7be0bfd3d90017e8f3a8" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63ae7be0bfd3d90017e8f3a8&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=63ae7be0bfd3d90017e8f3a8&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767131" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-66b1c311779f740018674083-td" data-recordindex="28" data-recordid="629" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-66b1c311779f740018674083" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Vòng xoay Phú Lâm (1)</span>
-                                        <img class="camImg-66b1c311779f740018674083" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=66b1c311779f740018674083&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=66b1c311779f740018674083&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767108" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-662a881a1afb9c00172d2559-td" data-recordindex="29" data-recordid="684" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-662a881a1afb9c00172d2559" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Kinh Dương Vương - Tên Lửa</span>
-                                        <span class="btn-switch-camera-mode">
-                                            <label id="tracking-btn-662a881a1afb9c00172d2559" class="tgl-btn" currentmode="camera" data-tg-off="Phát trực tiếp" data-tg-on="Phát hình ảnh" for="cb3" />
-                                        </span>
-                                        <img class="camImg-662a881a1afb9c00172d2559" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a881a1afb9c00172d2559&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=662a881a1afb9c00172d2559&amp;bg=black&amp;w=300&amp;h=230&amp;t=1754825767133" style="width:300px;height:230px" />
-                                    </div></div>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="nav-item" id="panel-tracking-5a8279865058170011f6eaef-td" role="option" tabindex="-1" data-recordindex="0" data-recordid="70" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-5a8279865058170011f6eaef" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Cao tốc LT-DG - Trạm thu phí Long Phước</span><img class="camImg-6792f16e8c5ed4001b27f482" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f16e8c5ed4001b27f482&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f16e8c5ed4001b27f482&amp;bg=black&amp;w=300&amp;h=230&amp;t=1758710656104" style="width:300px;height:230px">
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-58744fb0b807da0011e33cc0-td" data-recordindex="1" data-recordid="80" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-58744fb0b807da0011e33cc0" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Hoàng Hữu Nam - Đường D400</span><img class="camImg-5a8257e25058170011f6eacd" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8257e25058170011f6eacd&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8257e25058170011f6eacd&amp;bg=black&amp;w=300&amp;h=230&amp;t=1758710655525" style="width:300px;height:230px">
-                                    </div>
-                                </div>
-                            </td>                           
-                            <td class="nav-item" id="panel-tracking-649da77ea6068200171a6dd4-td" data-recordindex="3" data-recordid="100" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-649da77ea6068200171a6dd4" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Quốc Lộ 22 - Võ Văn Điều</span><img class="camImg-6792f1008c5ed4001b27f41f" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f1008c5ed4001b27f41f&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f1008c5ed4001b27f41f&amp;bg=black&amp;w=300&amp;h=230&amp;t=1758710655526" style="width:300px;height:230px">
-                                    </div>
-                                </div>
-                            </td>                            
-                            <td class="nav-item" id="panel-tracking-6623f5b56f998a001b25292f-td" data-recordindex="5" data-recordid="120" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6623f5b56f998a001b25292f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Quốc Lộ 1 - Ba Làng</span><img class="camImg-6792ef4f8c5ed4001b27f2c0" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792ef4f8c5ed4001b27f2c0&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792ef4f8c5ed4001b27f2c0&amp;bg=black&amp;w=300&amp;h=230&amp;t=1758710656384" style="width:300px;height:230px">
-                                        < </div>
-                                    </div>
-                            </td>                            
-                            <td class="nav-item" id="panel-tracking-6623f5b56f998a001b25292f-td" data-recordindex="5" data-recordid="120" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6623f5b56f998a001b25292f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Quốc Lộ 50 - Cổng chào Long An</span><img class="camImg-6792f03d8c5ed4001b27f378" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f03d8c5ed4001b27f378&amp;bg=black&amp;w=300&amp;h=230" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=6792f03d8c5ed4001b27f378&amp;bg=black&amp;w=300&amp;h=230&amp;t=1758710655528" style="width:300px;height:230px">
-                                    </div>
-                                </div>
-                            </td>
-                            <td class="nav-item" id="panel-tracking-6623f5b56f998a001b25292f-td" data-recordindex="5" data-recordid="120" data-boundview="dataview-1218" style="">
-                                <div class="nav-item-content" id="panel-tracking-6623f5b56f998a001b25292f" style="font-size: 11px !important;">
-                                    <div style="width:300px;height:240px">
-                                        <span>Nguyễn Văn Quỳ - Cầu Phú Mỹ</span><img class="camImg-5a8269c45058170011f6eae4" org-src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8269c45058170011f6eae4&amp;bg=black&amp;w=200&amp;h=130" src="https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=5a8269c45058170011f6eae4&amp;bg=black&amp;w=200&amp;h=130&amp;t=1758882761941" style="width:300px;height:230px">
-                                    </div>
-                                </div>
-                            </td>                            
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
+<body>
+    <div class="image-gallery" id="imageGallery"></div>
+    <!-- Dữ liệu JSON tích hợp trực tiếp vào trong thẻ <script> -->
+    <script>
+        const cameraData = {
+	"cameras": [
+    {
+      "id": "5a8279865058170011f6eaef",
+      "description": "Nguyễn Văn Linh - Phạm Hùng 2",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "58744fb0b807da0011e33cc0",
+      "description": "Hoàng Hữu Nam - Đường D400",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "56de42f611f398ec0c48128b",
+      "description": "Võ Văn Kiệt - Nguyễn Văn Cừ 1",
+      "location": "Quận 5, TP.HCM"
+    },
+    {
+      "id": "649da77ea6068200171a6dd4",
+      "description": "Quốc Lộ 22 - Võ Văn Điều",
+      "location": "Củ Chi, TP.HCM"
+    },
+    {
+      "id": "5a606dbc8576340017d0662b",
+      "description": "Điện Biên Phủ - Nguyễn Hữu Cảnh",
+      "location": "Quận Bình Thạnh, TP.HCM"
+    },
+    {
+      "id": "6623f5b56f998a001b25292f",
+      "description": "Quốc Lộ 1 - Ba Làng",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "63b548c3bfd3d90017ea77c0",
+      "description": "Nguyễn Duy Trinh - Nguyễn Thị Tư",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "63b54dcbbfd3d90017ea7ba8",
+      "description": "Quốc Lộ 1 - Cổng ĐH Quốc gia TPHCM",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "5a6065c58576340017d06615",
+      "description": "Tô Ngọc Vân - TX25",
+      "location": "Thủ Đức, TP.HCM"
+    },
+    {
+      "id": "6623efc26f998a001b25277f",
+      "description": "Tô Ký - Nguyễn Ảnh Thủ",
+      "location": "Quận 12, TP.HCM"
+    },
+    {
+      "id": "662a88a01afb9c00172d25d1",
+      "description": "Trần Văn Giàu - Đường Thanh Niên",
+      "location": "Bình Tân, TP.HCM"
+    },
+    {
+      "id": "63b664edbfd3d90017eaaa24",
+      "description": "CT Trung Lương - Võ Trần Chí 2",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "5a825ded5058170011f6ead7",
+      "description": "Quốc lộ 50 - Cầu Ông Thìn (2)",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "662a861e1afb9c00172d23ad",
+      "description": "Nguyễn Hữu Thọ - Phạm Hữu Lầu",
+      "location": "Quận 7, TP.HCM"
+    },
+    {
+      "id": "583f976361cfea0012cf68f9",
+      "description": "Nguyễn Thị Định - Lê Phụng Hiểu",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "63bd1f21bfd3d90017ec3d04",
+      "description": "Huỳnh Tấn Phát - Phạm Hữu Lầu",
+      "location": "Nhà Bè, TP.HCM"
+    },
+    {
+      "id": "662a8ddd1afb9c00172d2a0f",
+      "description": "guyễn Văn Linh - cầu Tân Thuận 2",
+      "location": "Quận 7, TP.HCM"
+    },
+    {
+      "id": "63ae777cbfd3d90017e8f177",
+      "description": "Nguyễn Tất Thành - Đoàn Như Hài",
+      "location": "Quận 4, TP.HCM"
+    },
+    {
+      "id": "586e1f18f9fab7001111b0a5",
+      "description": "Cộng Hòa - Trường Chinh",
+      "location": "Tân Bình, TP.HCM"
+    },
+    {
+      "id": "587478d8b807da0011e33cf3",
+      "description": "Nút giao Bảy Hiền CMT8",
+      "location": "Tân Bình, TP.HCM"
+    },
+    {
+      "id": "5deb576d1dc17d7c5515acf9",
+      "description": "Công Trường Dân Chủ",
+      "location": "Quận 1, TP.HCM"
+    },
+    {
+      "id": "63b54d27bfd3d90017ea7ae5",
+      "description": "Xa lộ Hà Nội - Đường D1",
+      "location": "Thủ Đức, TP.HCM"
+    },
+    {
+      "id": "56de42f611f398ec0c48127e",
+      "description": "Mai Chí Thọ - Võ Nguyên Giáp (Cát Lái cầu B)",
+      "location": "Thử Đức, TP.HCM"
+    },
+    {
+      "id": "5a10c79f02eb490011a0b0dd",
+      "description": "Mai Chí Thọ - Tố Hữu (C6)",
+      "location": "Thủ Đức, TP.HCM"
+    },
+    {
+      "id": "662b862a1afb9c00172dd1ff",
+      "description": "Hàm Nghi - Phó Đức Chính",
+      "location": "Quận 1, TP.HCM"
+    },
+    {
+      "id": "5deb576d1dc17d7c5515acf7",
+      "description": "Ngã sáu Cộng Hòa",
+      "location": "Quận 3, TP.HCM"
+    },
+    {
+      "id": "5deb576d1dc17d7c5515acf3",
+      "description": "Ba Tháng Hai - Lý Thái Tổ",
+      "location": "Quận 10, TP.HCM"
+    },
+    {
+      "id": "63ae7be0bfd3d90017e8f3a8",
+      "description": "Ba Tháng Hai - Lê Đại Hành 1",
+      "location": "Quận 10, TP.HCM"
+    },
+    {
+      "id": "66b1c311779f740018674083",
+      "description": "Vòng xoay Phú Lâm (1)",
+      "location": "Quận 6, TP.HCM"
+    },
+    {
+      "id": "662a881a1afb9c00172d2559",
+      "description": "Kinh Dương Vương - Tên Lửa",
+      "location": "Quận 6, TP.HCM"
+    },
+    {
+      "id": "6792f16e8c5ed4001b27f482",
+      "description": "Nguyễn Duy Trinh - Nguyễn Thị Tư",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "5a8257e25058170011f6eacd",
+      "description": "Hoàng Hữu Nam - Đường D400",
+      "location": "Quận 9, TP.HCM"
+    },
+    {
+      "id": "6792f1008c5ed4001b27f41f",
+      "description": "Quốc Lộ 22 - Võ Văn Điều",
+      "location": "Củ Chi, TP.HCM"
+    },
+    {
+      "id": "6792ef4f8c5ed4001b27f2c0",
+      "description": "Quốc Lộ 1 - Ba Làng",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "6792f03d8c5ed4001b27f378",
+      "description": "Quốc Lộ 50 - Cổng chào Long An",
+      "location": "Bình Chánh, TP.HCM"
+    },
+    {
+      "id": "5a8269c45058170011f6eae4",
+      "description": "Nguyễn Văn Quỳ - Cầu Phú Mỹ",
+      "location": "Quận 7, TP.HCM"
+    }
+]};
+
+        // Hàm để hiển thị ảnh và thông tin camera
+        function loadImages(cameras) {
+            const gallery = document.getElementById('imageGallery');
+            gallery.innerHTML = ''; // Xóa tất cả ảnh cũ
+
+            cameras.forEach(camera => {
+                // Tạo phần tử hình ảnh
+                const imgElement = document.createElement('img');
+                imgElement.src = `https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=${camera.id}`;
+                imgElement.alt = `Camera ID: ${camera.id}`;
+
+                // Tạo phần tử thông tin camera
+                const infoElement = document.createElement('div');
+                infoElement.classList.add('camera-info');
+                const descriptionElement = document.createElement('p');
+                descriptionElement.classList.add('camera-description');
+                descriptionElement.textContent = camera.description;
+                //const locationElement = document.createElement('p');
+                //locationElement.classList.add('camera-location');
+                //locationElement.textContent = `Vị trí: ${camera.location}`;
+
+                infoElement.appendChild(descriptionElement);
+                //infoElement.appendChild(locationElement);
+
+                // Tạo một container chứa ảnh và thông tin
+                const cameraContainer = document.createElement('div');
+                cameraContainer.appendChild(imgElement);
+                cameraContainer.appendChild(infoElement);
+
+                // Thêm vào gallery
+                gallery.appendChild(cameraContainer);
+            });
+        }
+
+		// Hàm tự động tải lại ảnh sau mỗi 10 giây
+        async function autoReload() {
+            loadImages(cameraData.cameras);
+            setInterval(async () => {                
+                loadImages(cameraData.cameras);
+            }, 10000); // Tải lại ảnh sau mỗi 10 giây
+        }
+
+        // Bắt đầu tải ảnh khi trang được tải
+        window.onload = autoReload;
+
+    </script>
 </body>
 </html>
