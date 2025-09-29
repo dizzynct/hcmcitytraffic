@@ -10,19 +10,20 @@
         }
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(6, 1fr);
-            gap: 10px;
-            margin: 20px;
+            grid-template-columns: repeat(8, 1fr);
+            gap: 1px;
         }
         .image-gallery img {
             width: 100%;
             height: auto;
-            border-radius: 5px;
-            border: 1px solid #ddd;
+        }
+		.camera-container {
+            border-radius: 0.1px;
+            border: 0px solid black;
         }
         .camera-info {
             text-align: center;
-            margin-top: 2px;
+			vertical-align: bottom;			
         }
         .camera-description {
             font-size: 8px;
@@ -32,33 +33,54 @@
             font-size: 12px;
             color: #777;
         }
+		.timer {
+      position: fixed;
+      padding: 2px;
+      background-color: rgba(0, 0, 0, 0.7);
+      color: white;
+      font-size: 8px;
+      border-radius: 1px;
+      font-weight: bold;
+	  z-index: 9999; 
+    }
     </style>
 </head>
 <body>
+	<div class="timer" id="timer">10s</div>
     <div class="image-gallery" id="imageGallery"></div>
     <!-- Dữ liệu JSON tích hợp trực tiếp vào trong thẻ <script> -->
     <script>
         const cameraData = {
-	"cameras": [
+	"cameras": [		
     {
       "id": "5a8279865058170011f6eaef",
       "description": "Nguyễn Văn Linh - Phạm Hùng 2",
       "location": "Bình Chánh, TP.HCM"
     },
+	{
+      "id": "5875d4f8b807da0011e33d1a",
+      "description": "Tạ Quang Bửu - Phạm Hùng",
+      "location": "Quận 8, TP.HCM"
+    },	
     {
       "id": "58744fb0b807da0011e33cc0",
-      "description": "Hoàng Hữu Nam - Đường D400",
-      "location": "Quận 9, TP.HCM"
+      "description": "Cầu Chánh Hương",
+      "location": "Quận 8, TP.HCM"
     },
     {
-      "id": "56de42f611f398ec0c48128b",
-      "description": "Võ Văn Kiệt - Nguyễn Văn Cừ 1",
+      "id": "56de42f611f398ec0c48128e",
+      "description": "Võ Văn Kiệt - Cầu Chữ Y",
       "location": "Quận 5, TP.HCM"
+    },
+	{
+      "id": "649da72ca6068200171a6dbb",
+      "description": "Tôn Đức Thắng - Hàm Nghi",
+      "location": "Quận 1, TP.HCM"
     },
     {
       "id": "649da77ea6068200171a6dd4",
-      "description": "Quốc Lộ 22 - Võ Văn Điều",
-      "location": "Củ Chi, TP.HCM"
+      "description": "Công Trường Mê Linh",
+      "location": "Quận 1, TP.HCM"
     },
     {
       "id": "5a606dbc8576340017d0662b",
@@ -67,8 +89,13 @@
     },
     {
       "id": "6623f5b56f998a001b25292f",
-      "description": "Quốc Lộ 1 - Ba Làng",
-      "location": "Bình Chánh, TP.HCM"
+      "description": "Xa Lộ Hà Nội",
+      "location": "Quận 2, TP.HCM"
+    },
+	{
+      "id": "583f976361cfea0012cf68f9",
+      "description": "Nguyễn Thị Định - Lê Phụng Hiểu",
+      "location": "Quận 9, TP.HCM"
     },
     {
       "id": "63b548c3bfd3d90017ea77c0",
@@ -109,12 +136,7 @@
       "id": "662a861e1afb9c00172d23ad",
       "description": "Nguyễn Hữu Thọ - Phạm Hữu Lầu",
       "location": "Quận 7, TP.HCM"
-    },
-    {
-      "id": "583f976361cfea0012cf68f9",
-      "description": "Nguyễn Thị Định - Lê Phụng Hiểu",
-      "location": "Quận 9, TP.HCM"
-    },
+    },    
     {
       "id": "63bd1f21bfd3d90017ec3d04",
       "description": "Huỳnh Tấn Phát - Phạm Hữu Lầu",
@@ -122,7 +144,7 @@
     },
     {
       "id": "662a8ddd1afb9c00172d2a0f",
-      "description": "guyễn Văn Linh - cầu Tân Thuận 2",
+      "description": "Nguyễn Văn Linh - cầu Tân Thuận 2",
       "location": "Quận 7, TP.HCM"
     },
     {
@@ -143,6 +165,11 @@
     {
       "id": "5deb576d1dc17d7c5515acf9",
       "description": "Công Trường Dân Chủ",
+      "location": "Quận 1, TP.HCM"
+    },
+	{
+      "id": "5deb576d1dc17d7c5515ad05",
+      "description": "Điện Biên Phủ - Đinh Tiên Hoàng",
       "location": "Quận 1, TP.HCM"
     },
     {
@@ -192,7 +219,7 @@
     },
     {
       "id": "6792f16e8c5ed4001b27f482",
-      "description": "Nguyễn Duy Trinh - Nguyễn Thị Tư",
+      "description": "Cao tốc LT-DG - Trạm thu phí Long Phước",
       "location": "Quận 9, TP.HCM"
     },
     {
@@ -219,8 +246,28 @@
       "id": "5a8269c45058170011f6eae4",
       "description": "Nguyễn Văn Quỳ - Cầu Phú Mỹ",
       "location": "Quận 7, TP.HCM"
+    },
+	{
+      "id": "56de42f611f398ec0c4812a2",
+      "description": "Nút giao Mỹ Thủy",
+      "location": "Quận 7, TP.HCM"
     }
+	
 ]};
+
+
+		var rotator = -1;
+		document.addEventListener('keydown', function(event) {
+		  // Kiểm tra nếu phím được nhấn là Space (mã 32 hoặc key === ' ')
+		  if (event.code === 'Space') {
+			if (rotator > 0) {
+				clearInterval(rotator);
+				rotator = -1;
+		  } else {
+				rotator = setInterval(async () => { countdown();}, 1000);
+		  }
+		  }
+		});
 
         // Hàm để hiển thị ảnh và thông tin camera
         function loadImages(cameras) {
@@ -228,9 +275,10 @@
             gallery.innerHTML = ''; // Xóa tất cả ảnh cũ
 
             cameras.forEach(camera => {
+				var timestamp = new Date().getTime();
                 // Tạo phần tử hình ảnh
-                const imgElement = document.createElement('img');
-                imgElement.src = `https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id=${camera.id}`;
+                const imgElement = document.createElement('img');				
+                imgElement.src = "https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id="+camera.id+"&t="+ timestamp;
                 imgElement.alt = `Camera ID: ${camera.id}`;
 
                 // Tạo phần tử thông tin camera
@@ -239,17 +287,18 @@
                 const descriptionElement = document.createElement('p');
                 descriptionElement.classList.add('camera-description');
                 descriptionElement.textContent = camera.description;
+				infoElement.appendChild(descriptionElement);
+				
                 //const locationElement = document.createElement('p');
                 //locationElement.classList.add('camera-location');
-                //locationElement.textContent = `Vị trí: ${camera.location}`;
-
-                infoElement.appendChild(descriptionElement);
+                //locationElement.textContent = `Vị trí: ${camera.location}`;                
                 //infoElement.appendChild(locationElement);
 
                 // Tạo một container chứa ảnh và thông tin
                 const cameraContainer = document.createElement('div');
-                cameraContainer.appendChild(imgElement);
+				cameraContainer.classList.add('camera-container');
                 cameraContainer.appendChild(infoElement);
+				cameraContainer.appendChild(imgElement);                
 
                 // Thêm vào gallery
                 gallery.appendChild(cameraContainer);
@@ -259,13 +308,25 @@
 		// Hàm tự động tải lại ảnh sau mỗi 10 giây
         async function autoReload() {
             loadImages(cameraData.cameras);
-            setInterval(async () => {                
-                loadImages(cameraData.cameras);
-            }, 10000); // Tải lại ảnh sau mỗi 10 giây
+			
+            //setInterval(async () => { loadImages(cameraData.cameras);}, 10000); // Tải lại ảnh sau mỗi 10 giây			
+			//rotator = setInterval(async () => { countdown();}, 1000);
         }
 
         // Bắt đầu tải ảnh khi trang được tải
         window.onload = autoReload;
+
+		let timeLeft = 10;
+
+		function countdown() {
+		  if (timeLeft > 0) {
+			timeLeft--;
+			document.getElementById("timer").textContent = timeLeft + "s";
+		  } else {
+			timeLeft = 10;
+			loadImages(cameraData.cameras);
+		  }
+		}
 
     </script>
 </body>
