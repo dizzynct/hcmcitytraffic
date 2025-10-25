@@ -73,6 +73,11 @@
       "location": "Quận 5, TP.HCM"
     },
 	{
+      "id": "662b85481afb9c00172dd0f1",
+      "description": "Võ Văn Kiệt - Pasteur",
+      "location": "Quận 1, TP.HCM"
+    },
+	{
       "id": "649da72ca6068200171a6dbb",
       "description": "Tôn Đức Thắng - Hàm Nghi",
       "location": "Quận 1, TP.HCM"
@@ -250,9 +255,18 @@
 	{
       "id": "56de42f611f398ec0c4812a2",
       "description": "Nút giao Mỹ Thủy",
+      "location": "Quận 9, TP.HCM"
+    },
+	{
+      "id": "662a8fd41afb9c00172d2bac",
+      "description": "Nguyễn Lương Bằng - Phạm Hữu Lầu",
       "location": "Quận 7, TP.HCM"
+    },
+	{
+      "id": "56de42f611f398ec0c481295",
+      "description": "Võ Văn Kiệt - Cầu Chà Và 1 (dạ cầu)",
+      "location": "Quận 6, TP.HCM"	  
     }
-	
 ]};
 
 
@@ -278,8 +292,9 @@
 				var timestamp = new Date().getTime();
                 // Tạo phần tử hình ảnh
                 const imgElement = document.createElement('img');				
-                imgElement.src = "https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id="+camera.id+"&t="+ timestamp;
-                imgElement.alt = `Camera ID: ${camera.id}`;
+                //imgElement.src = "https://giaothong.hochiminhcity.gov.vn:8007/Render/CameraHandler.ashx?id="+camera.id+"&bg=black&w=520&t="+ timestamp;
+				imgElement.src = "https://giaothong.hochiminhcity.gov.vn/render/ImageHandler.ashx?id="+camera.id+"&bg=black&w=520&t="+ timestamp;
+                imgElement.alt = `Error camID: ${camera.id}`;
 
                 // Tạo phần tử thông tin camera
                 const infoElement = document.createElement('div');
