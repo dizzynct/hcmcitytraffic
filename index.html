@@ -10,7 +10,7 @@
         }
         .image-gallery {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+			grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
             gap: 1px;
         }
         .image-gallery img {
@@ -51,8 +51,13 @@
     <!-- Dữ liệu JSON tích hợp trực tiếp vào trong thẻ <script> -->
     <script>
         const cameraData = {
-	"cameras": [		
-    {
+	"cameras": [		    
+	{
+      "id": "56de42f611f398ec0c481295",
+      "description": "Võ Văn Kiệt - Cầu Chà Và 1 (dạ cầu)",
+      "location": "Quận 6, TP.HCM"	  
+    },
+	{
       "id": "5a8279865058170011f6eaef",
       "description": "Nguyễn Văn Linh - Phạm Hùng 2",
       "location": "Bình Chánh, TP.HCM"
@@ -72,6 +77,8 @@
       "description": "Võ Văn Kiệt - Cầu Chữ Y",
       "location": "Quận 5, TP.HCM"
     },
+	{"id": "56de42f611f398ec0c481288","description": "Võ Văn Kiệt - Cầu Ông Lãnh 1","location": "Quận 1, TP.HCM"},
+	{"id": "56de42f611f398ec0c481289","description": "Võ Văn Kiệt - Cầu Ông Lãnh 2","location": "Quận 1, TP.HCM"},	
 	{
       "id": "662b85481afb9c00172dd0f1",
       "description": "Võ Văn Kiệt - Pasteur",
@@ -112,6 +119,11 @@
       "description": "Quốc Lộ 1 - Cổng ĐH Quốc gia TPHCM",
       "location": "Quận 9, TP.HCM"
     },
+	{
+      "id": "589b4644b3bf7600110283ce",
+      "description": "Hà Huy Giáp - Cầu Phú Long 1",
+      "location": "xã Đông Thạnh, TP.HCM"
+    },
     {
       "id": "5a6065c58576340017d06615",
       "description": "Tô Ngọc Vân - TX25",
@@ -131,12 +143,9 @@
       "id": "63b664edbfd3d90017eaaa24",
       "description": "CT Trung Lương - Võ Trần Chí 2",
       "location": "Bình Chánh, TP.HCM"
-    },
-    {
-      "id": "5a825ded5058170011f6ead7",
-      "description": "Quốc lộ 50 - Cầu Ông Thìn (2)",
-      "location": "Bình Chánh, TP.HCM"
-    },
+    },	
+	{"id": "5ad068b198d8fc001102e278","description": "Quốc lộ 50 - Cầu Ông Thìn (1)","location": "Bình Chánh, TP.HCM"    },
+    //{ "id": "5a825ded5058170011f6ead7", "description": "Quốc lộ 50 - Cầu Ông Thìn (2)",      "location": "Bình Chánh, TP.HCM" },
     {
       "id": "662a861e1afb9c00172d23ad",
       "description": "Nguyễn Hữu Thọ - Phạm Hữu Lầu",
@@ -256,18 +265,28 @@
       "id": "56de42f611f398ec0c4812a2",
       "description": "Nút giao Mỹ Thủy",
       "location": "Quận 9, TP.HCM"
+    },	
+	{
+      "id": "5a8267fe5058170011f6eae1",
+      "description": "Cầu Rạch Đĩa",
+      "location": "Quận 7, TP.HCM"	  
     },
 	{
-      "id": "662a8fd41afb9c00172d2bac",
-      "description": "Nguyễn Lương Bằng - Phạm Hữu Lầu",
-      "location": "Quận 7, TP.HCM"
-    },
+      "id": "589d0bceb3bf7600110283d6",
+      "description": "dạ Cầu Sài Gòn",
+      "location": "Quận 2, TP.HCM"	  
+    },	
+    //{ "id": "662b54bb1afb9c00172d8dbb",   "description": "Phạm Văn Chiêu - Đường số 59","location": "Quận GV, TP.HCM" },    
 	{
-      "id": "56de42f611f398ec0c481295",
-      "description": "Võ Văn Kiệt - Cầu Chà Và 1 (dạ cầu)",
-      "location": "Quận 6, TP.HCM"	  
-    }
+      "id": "63b66051bfd3d90017eaa4a3",
+      "description": "Nơ Trang Long - Phan Văn Trị",
+      "location": "Q Bình Thạnh, TP.HCM"
+    },    
+	{ "id": "662a8cc51afb9c00172d2938", "description": "Huỳnh Tấn Phát - Phú Thuận", "location": "Q7, TP.HCM"},
+	{ "id": "662a8fd41afb9c00172d2bac", "description": "Nguyễn Lương Bằng - Phạm Hữu Lầu", "location": "Quận 7, TP.HCM" },
+	{"id": "63bd1e95bfd3d90017ec3cd5","description": "Nguyễn Lương Bằng - Hoàng Quốc Việt","location": "Q7, TP.HCM"},
 ]};
+
 
 
 		var rotator = -1;
